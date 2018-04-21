@@ -14,22 +14,22 @@ import java.util.*
 
 fun main(args: Array<String>) {
 
-    val boundaryNumber = 9
-    val totalTurns = 3
+    val boundaryNumber = 9 // Boundary num to take generate numbers
+    val totalTurns = 3 // Total turns of user
 
-    fun generateRandomNumber(): Int {
+    fun generateRandomNumber(): Int {   // function to generate number
         val randomNumber = Random()
         val number = randomNumber.nextInt(boundaryNumber)
 //        println("Random Number-> $number")
         return number
     }
 
-    fun userInput(number: Int): Boolean {
+    fun userInput(number: Int): Boolean {  // function to take user input and if it matched with random number, return true if matched else false
         var match: Boolean = false
 
         var scanner = Scanner(System.`in`)
 
-        while (!scanner.hasNextInt()) {
+        while (!scanner.hasNextInt()) {   // only accept "int" input
             print("Wrong Input, Enter Again: ")
             scanner = Scanner(System.`in`)
 
@@ -48,10 +48,10 @@ fun main(args: Array<String>) {
 
         val number = generateRandomNumber()
 
-        println("Total chances/turns = $totalTurns")
+        println("Total chances/turns = $totalTurns") //total turns =3
 
         for (i in 1..totalTurns) {
-            println("Turn no $i , Enter Any Number b/w 0-$boundaryNumber")
+            println("Turn no $i , Enter Any Number b/w 0-$boundaryNumber") //boundary =9
             val match: Boolean = userInput(number)
 
             if (match == true) {
