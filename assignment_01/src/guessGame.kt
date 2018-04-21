@@ -12,7 +12,7 @@ import java.util.*
 
 //if yes then starts the game again else exit the game
 
-fun main(args: Array<String>){
+fun main(args: Array<String>) {
 
     val boundaryNumber = 9
     val totalTurns = 3
@@ -20,15 +20,24 @@ fun main(args: Array<String>){
     fun generateRandomNumber(): Int {
         val randomNumber = Random()
         val number = randomNumber.nextInt(boundaryNumber)
+//        println("Random Number-> $number")
         return number
     }
-    fun userInput(number:Int):Boolean {
-        var match:Boolean = false
 
-        val scanner = Scanner(System.`in`)
-        val guessNumber = scanner.nextInt()
-        if(guessNumber.equals(number))
-        {
+    fun userInput(number: Int): Boolean {
+        var match: Boolean = false
+
+        var scanner = Scanner(System.`in`)
+
+        while (!scanner.hasNextInt()) {
+            print("Wrong Input, Enter Again: ")
+            scanner = Scanner(System.`in`)
+
+        }
+        val guessNumber: Int = scanner.nextInt()
+
+
+        if (guessNumber.equals(number)) {
             match = true
         }
         return match
@@ -60,5 +69,5 @@ fun main(args: Array<String>){
         println("----------------------------------------------------------------------------------")
         println("----------------------------------------------------------------------------------")
 
-    }while(choice.equals("y") || choice.equals("Y") )
+    } while (choice.equals("y") || choice.equals("Y"))
 }
