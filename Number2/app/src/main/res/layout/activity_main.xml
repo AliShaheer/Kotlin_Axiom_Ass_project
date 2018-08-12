@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutId"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="30sp"
+            android:id="@+id/tvUserNoTextId"
+            android:text="@string/user_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textSize="30sp"
+            android:layout_toRightOf="@id/tvUserNoTextId"
+            android:id="@+id/tvUserNoId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" " />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/linearLayoutId"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvUserNameTextId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvUserEmailTextId"
+                android:text="@string/user_name"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tvUserNameId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fff"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvUserEmailTextId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvUserAgeTextId"
+                android:layout_marginBottom="-148dp"
+                android:text="@string/user_email"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tvUserEmailId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/btnPrevId"
+                android:text="ghh"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvUserAgeTextId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/tvUserNoId"
+                android:text="@string/user_age"
+                android:textSize="30sp" />
+
+            <TextView
+                android:textSize="30sp"
+                android:layout_toRightOf="@id/tvUserAgeTextId"
+                android:id="@+id/tvUserAgeId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNextId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="213dp"
+        android:text="@string/btn_next" />
+
+    <Button
+        android:id="@+id/btnPrevId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btnNextId"
+        android:layout_marginEnd="73dp"
+        android:text="@string/btn_previous" />
+
+</RelativeLayout>
